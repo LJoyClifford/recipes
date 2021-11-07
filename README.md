@@ -2,7 +2,7 @@
 
 ## Description
 
-Recipes is a JS application that leverages DOM manipulation to interact with the user. I built this project because I'm passionate about nutrition and home cooking. ["http://example.com"](Check out my blog about the project, there I get more into details about some of its features!)
+Recipe Search is a JS application that leverages DOM manipulation to interact with the user. I built this project because I'm passionate about nutrition and home cooking. ["http://example.com"](Check out my blog about the project, there I get more into details about some of its features!)
 
 ## Installation
 
