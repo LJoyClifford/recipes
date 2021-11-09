@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap');
+@import url('https://fonts.google.com/specimen/Atomic+Age?preview.text=Recipe%20Search&preview.text_type=custom');
+@import url('https://fonts.google.com/specimen/Atomic+Age?preview.text=Recipe%20Search&preview.text_type=custom');
 
 body {
     background-color: #323232;
@@ -7,7 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: radial-gradient(rgba(#7600bf, 0.5) 0%, transparent 70%), linear-gradient(#0b161e 40%, #202076 70%);
+    background: radial-gradient(rgba(#bf0000, 0.5) 0%, transparent 70%), linear-gradient(#0b161e 40%, #000003 70%);
     perspective: 700px;
     font-size: clamp(10px, 2vw, 20px);
 }
@@ -16,7 +16,7 @@ div.section {
     width: 60%;
     left: 20%;
     right: 20%;
-    background-color: aquamarine;
+    background-color: rgb(0, 8, 6);
     text-align: center;
     margin: 0 auto;
 }
@@ -25,7 +25,7 @@ div.section {
     height: 5em;
 }
 
-#background, #shows {
+#background, #recipes {
     margin-top: .5em;
     margin-bottom: .5em;
 }
@@ -80,7 +80,7 @@ img {
     width: 60%;
     left: 20%;
     right: 20%;
-    border-color: #fe05e1;
+    border-color: #fe0505;
     background-color: #ffffff;
     margin: 0.5em;
     padding: .5em;
@@ -120,7 +120,7 @@ text-shadow: -1px -1px 0 rgb(247, 241, 241), 1px -1px 0 rgb(247, 241, 241),
 }
 
 input[type="submit"] {
-background-color: #04aa6d;
+background-color: #070000;
 color: white;
 margin: 8px 0;
 margin-left: 15px;
@@ -162,7 +162,7 @@ font-size: large;
 }
 
 .delete-bttn:hover {
-background-color: pink;
+background-color: rgb(223, 18, 18);
 }
 
 div#title-section h2 {
@@ -174,7 +174,7 @@ div#title-section h2 {
   margin: 0;
   font-size: 3.5em;
   color: white;
-  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe0505, 0 0 0.3em #fe0505;
 }
 footer#branding {
     color: black;
