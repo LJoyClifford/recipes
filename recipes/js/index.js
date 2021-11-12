@@ -1,11 +1,4 @@
-// create variables for the sections that need to be targeted
-
-// const handlePageLoaded = () => {
-// attach the submit listener to the search form
-//}
-// document.addEventListener("DOMContentLoaded", handlePageLoaded )
-
-
-
-
- 
+let searchInputDom = document.querySelector("#search-input");
+let apiKey = "2732988f21c44febb520f8872d9bddaa";
+let favoriteList = [];
+let favoriteAmountDom = document.querySelector("#favoriteAmount");
