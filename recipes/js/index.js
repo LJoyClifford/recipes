@@ -27,3 +27,11 @@ searchInputDom.addEventListener("keypress", function (e) {
       title.classList.add("title");
       title.innerText = recipie.title;
       recipieContainer.appendChild(title);
+
+      recipieContainer.addEventListener("mouseover", function () {
+        title.innerText = "Open this recipie";
+      });
+      recipieContainer.addEventListener("mouseleave", function () {
+        title.innerText = recipie.title;
+      });
+
