@@ -79,14 +79,27 @@ searchInputDom.addEventListener("keypress", function (e) {
 
     title.addEventListener("click", function () {
       fetch(
-        `https://api.spoonacular.com/recipes/${recipie.id}/information?apiKey=${apiKey}`
+        `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${apiKey}`
       )
 
+      .then((respond) => respond.json())
+      .then((recipe) => {
+        let summaryDom = document.createElement("div");
+        summaryDom.classList.add("summary");
+        summaryDom.innerHTML = recipe.summary;
+        recipeContainer.appendChild(summaryDom);
+        recipeContainer.classList.add("selected");
+
+        closeBtn.onclick = function (e) {
+          e.stopPropagation();
+          recipieContainer.classList.remove("selected");
+          recipieContainer.removeChild(summaryDom);
+        };
+      });
+  });
+});
+}
     
-
-
-
-
 
 
 

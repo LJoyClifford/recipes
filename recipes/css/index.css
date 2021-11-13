@@ -256,3 +256,31 @@ footer small {
     bottom: 100px;
     cursor: pointer;
   }
+  .recipe.liked .likeBtn {
+    color: rgb(223, 18, 18);
+  }
+  .recipe.liked:not(.selected) .likeBtn {
+    display: block;
+  }
+  .recipe:not(.selected):hover > .likeBtn {
+    display: block;
+  }
+  .recipe:not(.selected):hover > img {
+    opacity: 0.4;
+  }
+  .recipe .title {
+    color: black;
+    cursor: pointer;
+  }
+  .recipe.liked .title {
+    font-weight: bold;
+    color: white;
+  }
+  .recipe img {
+    height: 200px;
+    width: 180px;
+    object-fit: contain;
+  }
+  .recipe .summary {
+    font-style: italic;
+  }
