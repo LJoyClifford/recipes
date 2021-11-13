@@ -211,4 +211,12 @@ footer small {
 
 .hide {
     display: none;
-}
+
+    #recipes-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 10px;
+        background-color: antiquewhite;
+        position: relative;
+      }
