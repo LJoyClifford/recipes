@@ -11,6 +11,14 @@ searchInputDom.addEventListener("keypress", function (e) {
       )
         .then((respond) => respond.json())
         .then((list) => renderRecipies(list.results));
-    }
+    } 
     console.log("you pressed", e.key);
   });
+
+
+  function renderRecipies(list) {
+    let recipesListDom = document.querySelector("#recipes-list");
+    recipesListDom.innerHTML = "";
+    list.forEach((recipie) => {
+      let recipieContainer = document.createElement("div");
+      recipieContainer.classList.add("recipie");

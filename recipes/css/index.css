@@ -31,8 +31,8 @@ div.section {
 }
 
 #header-img {
-    background-image: url("../images/background.png");
-    background-size: cover;
+    background-image: url("https://fs02.vseosvita.ua/020125a6-97c9-378x191.jpg");
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     left: 30%;
