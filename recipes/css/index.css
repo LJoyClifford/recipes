@@ -245,3 +245,14 @@ footer small {
         background-color: indianred;
       }
       
+.recipe .likeBtn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 50px;
+    color: palevioletred;
+    position: absolute;
+    left: calc(50% - 25px);
+    bottom: 100px;
+    cursor: pointer;
+  }
