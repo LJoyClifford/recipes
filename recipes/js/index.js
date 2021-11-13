@@ -35,7 +35,7 @@ searchInputDom.addEventListener("keypress", function (e) {
         title.innerText = recipe.title;
       });
 
-    let recipiImg = document.createElement("img");
+    let recipeImg = document.createElement("img");
     recipeImg.src = recipe.image;
     recipeContainer.appendChild(recipeImg);
 
