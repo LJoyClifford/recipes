@@ -28,16 +28,28 @@ searchInputDom.addEventListener("keypress", function (e) {
       title.innerText = recipe.title;
       recipeContainer.appendChild(title);
 
-      recipieContainer.addEventListener("mouseover", function () {
+      recipeContainer.addEventListener("mouseover", function () {
         title.innerText = "Open this recipe";
       });
       recipeContainer.addEventListener("mouseleave", function () {
         title.innerText = recipe.title;
       });
 
-    let recipieImg = document.createElement("img");
+    let recipiImg = document.createElement("img");
     recipeImg.src = recipe.image;
     recipeContainer.appendChild(recipeImg);
+
+    let likeBtn = document.createElement("button");
+    likeBtn.innerHTML = "&#10084;";
+    likeBtn.addEventListener("mouseover", function (e) {
+      e.stopPropagation();
+      if (recipeContainer.classList.contains("liked")) {
+        title.innerText = "Remove this recipe to favorites";
+      } else {
+        title.innerText = "Add this recipe to favorites";
+      }
+    });
+
 
 
 
