@@ -69,6 +69,22 @@ searchInputDom.addEventListener("keypress", function (e) {
       }
       favoriteAmountDom.innerText = favoriteList.length;
     };
+    likeBtn.classList.add("likeBtn");
+    recipeContainer.appendChild(likeBtn);
+
+    let closeBtn = document.createElement("button");
+    closeBtn.classList.add("close");
+    closeBtn.innerText = "x";
+    recipeContainer.appendChild(closeBtn);
+
+    title.addEventListener("click", function () {
+      fetch(
+        `https://api.spoonacular.com/recipes/${recipie.id}/information?apiKey=${apiKey}`
+      )
+
+    
+
+
 
 
 
