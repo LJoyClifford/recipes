@@ -10,28 +10,34 @@ searchInputDom.addEventListener("keypress", function (e) {
         `https://api.spoonacular.com/recipes/complexSearch?includeIngredients=${ingridients}&apiKey=${apiKey}`
       )
         .then((respond) => respond.json())
-        .then((list) => renderRecipies(list.results));
+        .then((list) => renderRecipes(list.results));
     } 
     console.log("you pressed", e.key);
   });
 
 
-  function renderRecipies(list) {
+  function renderRecipes(list) {
     let recipesListDom = document.querySelector("#recipes-list");
     recipesListDom.innerHTML = "";
-    list.forEach((recipie) => {
-      let recipieContainer = document.createElement("div");
-      recipieContainer.classList.add("recipie");
+    list.forEach((recipe) => {
+      let recipeContainer = document.createElement("div");
+      recipeContainer.classList.add("recipe");
 
       let title = document.createElement("div");
       title.classList.add("title");
-      title.innerText = recipie.title;
-      recipieContainer.appendChild(title);
+      title.innerText = recipe.title;
+      recipeContainer.appendChild(title);
 
       recipieContainer.addEventListener("mouseover", function () {
-        title.innerText = "Open this recipie";
+        title.innerText = "Open this recipe";
       });
-      recipieContainer.addEventListener("mouseleave", function () {
-        title.innerText = recipie.title;
+      recipeContainer.addEventListener("mouseleave", function () {
+        title.innerText = recipe.title;
       });
+
+    let recipieImg = document.createElement("img");
+    recipeImg.src = recipe.image;
+    recipeContainer.appendChild(recipeImg);
+
+
 

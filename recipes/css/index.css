@@ -220,3 +220,28 @@ footer small {
         background-color: antiquewhite;
         position: relative;
       }
+      #recipes-header {
+        color: white;
+      }
+      
+      .recipe {
+        width: 200px;
+        height: 250px;
+        margin: 10px;
+        padding: 10px;
+        background-color: beige;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        transition: all 1s;
+      }
+      .recipe:hover {
+        transform: scale(1.1);
+      }
+      .recipe.liked {
+        background-color: indianred;
+      }
+      
