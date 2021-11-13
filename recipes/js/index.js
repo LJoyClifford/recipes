@@ -22,3 +22,8 @@ searchInputDom.addEventListener("keypress", function (e) {
     list.forEach((recipie) => {
       let recipieContainer = document.createElement("div");
       recipieContainer.classList.add("recipie");
+
+      let title = document.createElement("div");
+      title.classList.add("title");
+      title.innerText = recipie.title;
+      recipieContainer.appendChild(title);

@@ -50,7 +50,7 @@ div.section {
     font-weight: bolder;
     text-align: center;
     color: black;
-    letter-spacing: 0.1em;
+    letter-spacing: .1em;
     padding: .5em;
     text-shadow: -1px -1px 0 rgb(247, 241, 241), 1px -1px 0 rgb(247, 241, 241),
         -1px 1px 0 rgb(247, 241, 241), 1px 1px 0 rgb(247, 241, 241);
@@ -82,7 +82,7 @@ img {
     right: 20%;
     border-color: #fe0505;
     background-color: #ffffff;
-    margin: 0.5em;
+    margin: .5em;
     padding: .5em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -95,7 +95,7 @@ img {
 }
 
 .show-card:hover {
-box-shadow: 0 8px 16px 0 rgba(218, 31, 31, 0.685);
+box-shadow: 0 8px 16px 0 rgba(218, 31, 31, .685);
 }
 
 #shows-container {
