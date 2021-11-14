@@ -284,3 +284,18 @@ footer small {
   .recipe .summary {
     font-style: italic;
   }
+
+  
+.recipie.liked .likeBtn {
+  color: rgb(223, 18, 18);
+}
+.recipie.liked:not(.selected) .likeBtn {
+  display: block;
+}
+.recipie:not(.selected):hover > .likeBtn {
+  display: block;
+}
+.recipie:not(.selected):hover > img {
+  opacity: 0.4;
+}
+
