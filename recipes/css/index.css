@@ -7,7 +7,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: radial-gradient(rgba(#bf0000, 0.5) 0%, transparent 70%), linear-gradient(#0b161e 40%, #000003 70%);
+    background: radial-gradient(rgba(#bf0000, 0.5) 0%, transparent 70%), 
+    linear-gradient(#0b161e 40%, #000003 70%);
     perspective: 700px;
     font-size: clamp(10px, 2vw, 20px);
 }
@@ -25,7 +26,8 @@ div.section {
     height: 5em;
 }
 
-#background, #recipes {
+#background, 
+#recipes {
     margin-top: .5em;
     margin-bottom: .5em;
 }
@@ -55,7 +57,6 @@ div.section {
     text-shadow: -1px -1px 0 rgb(247, 241, 241), 1px -1px 0 rgb(247, 241, 241),
         -1px 1px 0 rgb(247, 241, 241), 1px 1px 0 rgb(247, 241, 241);
 }
-
 
 .list-items {
     list-style: none;
@@ -104,7 +105,7 @@ justify-content: center;
 flex-wrap: wrap;
 }
 
-input[type="text"]:not(.edit-input) {
+input[type="search"]:not(.edit-input) {
 border: 0;
 box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
 margin: 8px 0;
@@ -169,7 +170,8 @@ div#title-section h2 {
     font-size: 5.5em;
 }
 
-#title-section h2, #show-header {
+#title-section h2, 
+#show-header {
   font-family: 'Mr Dafoe';
   margin: 0;
   font-size: 3.5em;
@@ -211,6 +213,7 @@ footer small {
 
 .hide {
     display: none;
+}
 
     #recipes-list {
         display: flex;
@@ -268,6 +271,7 @@ footer small {
   .recipe:not(.selected):hover > img {
     opacity: 0.4;
   }
+
   .recipe .title {
     color: black;
     cursor: pointer;
@@ -284,57 +288,27 @@ footer small {
   .recipe .summary {
     font-style: italic;
   }
-
+  .recipe.selected {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top: 10%;
+    background-color: aliceblue;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    height: auto;
+    z-index: 2;
+  }
+  .recipe.selected .close {
+    display: block;
+  }
   
-.recipe.liked .likeBtn {
-  color: rgb(223, 18, 18);
-}
-.recipe.liked:not(.selected) .likeBtn {
-  display: block;
-}
-.recipe:not(.selected):hover > .likeBtn {
-  display: block;
-}
-.recipe:not(.selected):hover > img {
-  opacity: 0.4;
-}
-
-.recipie .title {
-  color: black;
-  cursor: pointer;
-}
-.recipie.liked .title {
-  font-weight: bold;
-  color: white;
-}
-.recipie img {
-  height: 200px;
-  width: 180px;
-  object-fit: contain;
-}
-.recipie .summary {
-  font-style: italic;
-}
-.recipie.selected {
-  position: absolute;
-  width: 50%;
-  left: 25%;
-  top: 10%;
-  background-color: aliceblue;
-  padding: 20px;
-  border: 1px solid grey;
-  border-radius: 10px;
-  height: auto;
-  z-index: 2;
-}
-.recipie.selected .close {
-  display: block;
-}
-
-.close {
-  display: none;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
+  .close {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  

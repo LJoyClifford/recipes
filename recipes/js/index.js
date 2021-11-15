@@ -4,7 +4,7 @@ let favoriteList = [];
 let favoriteAmountDom = document.querySelector("#favoriteAmount");
 
 searchInputDom.addEventListener("keypress", function (e) {
-    let ingridients = e.target.value;
+    let ingredients = e.target.value;
     if (e.key === "Enter") {
       fetch(
         `https://api.spoonacular.com/recipes/complexSearch?includeIngredients=${ingridients}&apiKey=${apiKey}`
@@ -15,9 +15,9 @@ searchInputDom.addEventListener("keypress", function (e) {
     console.log("you pressed", e.key);
   });
 
-
   function renderRecipes(list) {
     let recipesListDom = document.querySelector("#recipes-list");
+
     recipesListDom.innerHTML = "";
     list.forEach((recipe) => {
       let recipeContainer = document.createElement("div");
@@ -49,8 +49,7 @@ searchInputDom.addEventListener("keypress", function (e) {
         title.innerText = "Add this recipe to favorites";
       }
     });
-
-    likeBtn.addEventListener("mouseleave", function () {
+     likeBtn.addEventListener("mouseleave", function () {
       title.innerText = recipe.title;
     });
     likeBtn.onclick = function (e) {
@@ -59,7 +58,7 @@ searchInputDom.addEventListener("keypress", function (e) {
     recipeContainer.classList.toggle("liked");
       if (recipeContainer.classList.contains("liked")) {
         favoriteList.push(recipe);
-        title.innerText = "Remove this recipe to favorites";
+        title.innerText = "Remove this recipe from favorites";
       } else {
         let recipeIndexToRemove = favoriteList.findIndex(function (rec) {
           return rec.id == recipe.id;
@@ -77,6 +76,8 @@ searchInputDom.addEventListener("keypress", function (e) {
     closeBtn.innerText = "x";
     recipeContainer.appendChild(closeBtn);
 
+    recipesListDom.appendChild(recipeContainer);
+
     title.addEventListener("click", function () {
       fetch(
         `https://api.spoonacular.com/recipes/${recipe.id}/information?apiKey=${apiKey}`
@@ -92,8 +93,8 @@ searchInputDom.addEventListener("keypress", function (e) {
 
         closeBtn.onclick = function (e) {
           e.stopPropagation();
-          recipieContainer.classList.remove("selected");
-          recipieContainer.removeChild(summaryDom);
+          recipeContainer.classList.remove("selected");
+          recipeContainer.removeChild(summaryDom);
         };
       });
   });
